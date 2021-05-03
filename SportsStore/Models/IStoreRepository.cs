@@ -4,6 +4,10 @@ namespace SportsStore.Models
     public interface IStoreRepository
     {
         IQueryable<Product> Products { get; }
+
+        void SaveProduct(Product p);
+        void CreateProduct(Product p);
+        void DeleteProduct(Product p);
     }
     /*
     This interface uses IQueryable<T> to allow a caller to obtain a sequence of Product objects. The IQueryable<T> interface is
